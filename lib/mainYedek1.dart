@@ -14,38 +14,29 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
 
-  Map<String,dynamic> map={'name':'Zafer1','number':75};
-  Map<String,dynamic> map1={};
-  String toName='';
-  int toNumber=0;
-  String name1='';
-  int number1=0;
-  
-  fromMap(Map<String,dynamic> map) {
-  //String toName=map.values.toString();
-    toName=map['name'];
-    toNumber=map['number'];
-  print(toName);
-  print(toNumber);
+  map() {
+    Map<String, dynamic> mapx = {'name': 'Ali35','number':35};
+    print(mapx);
+    //mapx.update('number', (value)=>++value);
+    //mapx.update('name', (value) => 'demir',ifAbsent: ()=>'demir');
+    //mapx.update('name', (value) => 'demir35');
+    //print(mapx);
+    //mapx.update('number', (value) => 50);
+    /* mapx.forEach((key, value) {
+      if(key=='name') {
+        print(value);
+      }
+    });*/
+    //print('Map deger :$mapx');
+    bool boolName=mapx.containsKey('name');
+    print(boolName);
   }
-
- Map<String,dynamic> toMap(name1,int number){
-    //Map<String,dynamic> map1={'name':name1,'number':number};
-   map1={'name':name1,'number':number};
-    return map1;
- }
-
- readMap(){
-   Map<String,dynamic> mapq= toMap('Ahmet',38);
-    fromMap(mapq);
- }
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-   // fromMap(map);
-    readMap();
+    map();
   }
 
   @override

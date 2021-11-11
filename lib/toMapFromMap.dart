@@ -5,8 +5,9 @@ class ToMapFromMap{
     this.name=name;
   }
 
-  Map<String,dynamic> map(String name,int number){
+  Map<String,dynamic> toMap(String name,int number){
     return {'name':'$name','number':number};
   }
+
 
 }
